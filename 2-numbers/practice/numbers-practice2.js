@@ -30,13 +30,13 @@ console.log(Math.abs(miNum2))
 console.log(Math.abs(-13))
 
 // find the minimum value in a set of numbers: 12,13,14,15,2,-1
-const myList = (12,13,14,15,2,-1)
-console.log(Math.min(myList))
-//or\r
+// const myList = (12,13,14,15,2,-1) 
+// console.log(Math.min(myList)) doesn't work properly
+//or
 console.log(Math.min(12,13,14,15,2,-1))
 
 // find the maximum value in a set of numbers: 12,13,14,15,2,-1
-console.log(Math.min(myList))
+// console.log(Math.max(myList)) doesn't work properly
 //or
 console.log(Math.max(12,13,14,15,2,-1))
 
@@ -47,7 +47,7 @@ console.log(randNum)
 console.log(Math.random())
 
 // Create a random number between 0-10
-const randVal = Math.random(0,10)
+const randVal = (Math.random()*10)
 console.log(randVal)
 //or
-console.log(Math.random(0,10))
+console.log(Math.random()*10)

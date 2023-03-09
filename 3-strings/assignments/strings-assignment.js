@@ -22,29 +22,29 @@ console.log(friend);
 
 // 3. Using 5 or more of the following words, create a template literal that makes a legible sentence.
 //    Do not create your own words, use the existing ones below!
-const word1 = "hello"; 
+//const word1 = "hello"; 
 const word2 = "horror";
-const word3 = "peace";
-const word4 = "world"
-const word5 = "dislike"; 
+//const word3 = "peace";
+//const word4 = "world"
+//const word5 = "dislike"; 
 const word6 = "umbrella"; 
-const word7 = "car"; 
-const word8 = "pasta"; 
-const word9 = "pizza"; 
-const word10 = "movies";
-const word11 = "football"; 
-const word12 = "soccer"; 
-const word13 = "eat"; 
-const word14 = "cookie"; 
-const word15 = "favorite";
-const word16 = "makeup"; 
-const word17 = "I"; 
-const word18 = "to"; 
+//const word7 = "car"; 
+//const word8 = "pasta"; 
+//const word9 = "pizza"; 
+//const word10 = "movies";
+//const word11 = "football"; 
+//const word12 = "soccer"; 
+//const word13 = "eat"; 
+//const word14 = "cookie"; 
+//const word15 = "favorite";
+//const word16 = "makeup"; 
+//const word17 = "I"; 
+//const word18 = "to"; 
 const word19 = "my";
 const word20 = "is";
-const word21 = "and";
+//const word21 = "and";
 const word22 = "also";
-const word23 = "like"; 
+//const word23 = "like"; 
 const sent = `${word19} ${word6} ${word20} ${word2} ${word22}`
 console.log(sent);
 

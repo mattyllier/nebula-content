@@ -36,11 +36,15 @@ console.log(allStar);
 const string1 = "How are you?" 
 const qMark = (string1[11]);
 console.log(qMark);
+//or
+const qMark0 = string1.length-1
+const qMark1 = string1[qMark0]
+console.log(qMark1);
 
 
 // Given the following variables, add them together to get 15 
-const ten = '10';
-const five = '5';
+const ten = 10;
+const five = 5;
 console.log(ten+five);
 
 // Given the following sentence, turn it into an array.

@@ -39,12 +39,8 @@ console.log();
 // If x or y is equal to 42 log 'I see you've found the ultimate answer to life, the universe and everything.'
 x = 56;
 y = 42;
-if (x = 42) {
+if (x === 42 || y === 42) {
     console.log("I see you've found the ultimate answer to life, the universe and everything");
-} else if (y = 42) {
-    console.log("I see you've found the ultimate answer to life, the universe and everything");
-} else {
-    console.log()
 }
 // Save your name to a variable called name
 const miName = "Matt Reilly"
@@ -117,4 +113,38 @@ if (userId === inputId && password === inputPass) {
     console.log(creditCardNum, last4SS);
 } else {
     console.log(`incorrect username or id`);
+}
+console.log();
+
+
+// Utilize the switch statement to re-write your horse-racing exercise from earlier
+// Feel free to copy the old if statement in and convert it into a switch statement
+// Create a Horse Racing program that when executed, stores a random number in a variable called position between 1 and 5. 
+// The program should then check to see what number is stored in the variable and output the messages indicated in the comments below.
+
+
+// If position is 1, log to the console: "(Insert horseName) finished in first place!"
+// If position is 2, log to the console: "(Insert horseName) finished in second place!"
+// If position is 3, log to the console: "(Insert horseName) finished in third place!"
+// If position is greater than 4, log to the console: "(Insert horseName) did not finish in the top 3."
+
+let nameOfHorse = `Jake`;
+let racePosition = (Math.ceil(Math.random()*5))
+console.log(racePosition)
+switch (racePosition){
+    case 1:
+        console.log(`${nameOfHorse} finished in first place!`);
+        break;
+    case 2:
+        console.log(`${nameOfHorse} finished in second place!`);
+        break;
+    case 3:
+        console.log(`${nameOfHorse} finished in third place!`);
+        break;
+    case 4:
+        console.log(`${nameOfHorse} did not finish in the top 3.`);
+        break;
+    case 5:
+        console.log(`${nameOfHorse} did not finish in the top 3.`);
+        break;
 }

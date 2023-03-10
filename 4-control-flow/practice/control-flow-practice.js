@@ -98,7 +98,7 @@ console.log();
 // Initialize a variable called creditCardNum, set it equal to a fake credit card string-number
 const creditCardNum = `9045-1818-3335-7351`
 // Initialize a variable called last4SS, set it equal to a 4 string-numbers (dont use your real SS last 4!)
-const last4SS = [`4`,`3`,`5`,`9`]
+const last4SS = `4359`
 // Initialize a variable called userId, set it equal to a fake user ID
 const userId = `user-93035`
 // Initialize a variable called password, set it equal to a fake password
@@ -109,11 +109,9 @@ let inputPass = `jakewinstherace395`
 // Write a ternary statement that checks if userId is equal to inputId and if password is also equal to inputPass
 // If they are the same, log the credit card num and the last4SS
 // If not, log 'incorrect username or id'
-if (userId === inputId && password === inputPass) {
-    console.log(creditCardNum, last4SS);
-} else {
-    console.log(`incorrect username or id`);
-}
+let input = (userId === inputId && password === inputPass) ? `cc: ${creditCardNum}\nss: ${last4SS}` : `incorrect username or id`;
+console.log(input);
+
 console.log();
 
 
@@ -141,10 +139,7 @@ switch (racePosition){
     case 3:
         console.log(`${nameOfHorse} finished in third place!`);
         break;
-    case 4:
-        console.log(`${nameOfHorse} did not finish in the top 3.`);
-        break;
-    case 5:
+    default:
         console.log(`${nameOfHorse} did not finish in the top 3.`);
         break;
 }

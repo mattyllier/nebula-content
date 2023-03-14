@@ -34,5 +34,8 @@ let phone = ['iphone', 'android']
 let laptop = ['MacBook', 'HP', 'Dell']
 const phoneLaptop = phone.concat(laptop);
 console.log(phoneLaptop);
+//or
+const newArr = [...phone, ...laptop];
+console.log(newArr)
 //13.   Write a line of code to test if something is an array or not
 console.log(Array.isArray(dayArray));

@@ -100,4 +100,5 @@ console.log(myArr2)
 console.log(myArr2.concat(myStr))
 // Create a multi-dimensional array
 const myArr3 = [[7,5,9],"forty-nine",[7,7],"twenty-five",[5,5],"eighty-one",[3,3,3,3]]
-console.log(myArr3);
+myArr3[0].splice(1,1,97);
+console.log(myArr3)

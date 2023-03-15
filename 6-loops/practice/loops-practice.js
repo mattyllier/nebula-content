@@ -74,3 +74,62 @@ console.log()
         }
         console.log(negativeArr)
         console.log(positiveArr)
+
+console.log()
+
+
+//while loop
+let i = 0
+while(i < 10){
+console.log(i)
+i++
+}
+
+console.log()
+//do-while loop
+i = 0
+do {
+  console.log(i);
+i++
+} while(i < 10)
+
+console.log()
+
+// Reminder: control-c will kill an infinitely running node-process
+// 1.   Write a while loop that loops over a string until it finds the letter "a"
+i = 0
+myStr = "which letters does this string contain"
+ while(myStr[i] !=='a'){
+     console.log(myStr[i])
+     i++
+}
+//or
+console.log()
+i = 0
+while(i < myStr.length){
+    if(myStr[i] === 'a'){
+        console.log(myStr[i])
+        break;
+    }
+    i++
+}
+
+
+// 2.   Write a while loop that logs to the console the 'count' until the 'count' reaches 100
+//      Inside the while loop be sure to increase count by some number
+console.log()
+let count = 0
+while(count < 100 ){
+    count++
+}
+console.log(count)
+
+//nested loop
+
+// const arr = ['a','b','c','f','a','l','c']
+// for(let i = 0; i < arr.length; i++){
+//     for(let j = i+1; j < arr.length; j++){
+//         console.log(arr[i],arr[j]);
+//     }
+// }
+

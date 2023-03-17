@@ -133,33 +133,23 @@ oddNums(16)
 
 // 3. Write a function that takes in a list of names and returns a list of initials. The names will be formatted: 'Peter Parker'. 
 namesArr = ['Maureen Keeley','Maureen McBreen','Kathleen Coco']
-const init = (array) => {
-    for(let i = 0; i < array.length; i++){
-        let name = array[i]
-        for(let j = 0; j < array[i].length; j++){
-            name.split(' ')
-        }
-        console.log(name[0])
-    }
-}
-init(namesArr)
-console.log()
-//or
 const initialsArr = []
 const initials = (array) => {
     for(let i = 0; i < array.length; i++){
+        let initStr = ''
         for(let j = 0; j < array[i].length; j++){
             let letter = array[i][j]
             if(letter===letter.toUpperCase() && letter !== ' '){
-                initialsArr.push(letter)
+                initStr += letter
             }
-}
+        }
+        initialsArr.push(initStr)
     }
     console.log(initialsArr)
 }
 initials(namesArr)
-console.log()
 
+console.log()
 // 4. Write a function which takes in two numbers and a mathematical operator and performs Math on those two numbers utilizing that operator
 const mathsOperation = (num1,num2,operator) => {
     if(operator==='+'){

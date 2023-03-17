@@ -41,6 +41,14 @@ for(let i = 0; i < namesArr.length; i++){
 }
 console.log(firstNamesArr.join(''))
 
+//or (better way)
+const firstNamesArray = []
+for(let i = 0; i < namesArr.length; i++){
+    let names = namesArr[i].split(' ')
+    firstNamesArray.push(names[0])
+}
+console.log(firstNamesArray)
+
 // 6.   Use the celebrity array for this question
 //      Create a for loop which will iterate over each element and output a new array of only last names
 const lastNamesArr = []
@@ -55,6 +63,13 @@ for(let i = 0; i < namesArr.length; i++){
 }
 }
 console.log(lastNamesArr.join(''))
+//or
+const firstNamesArray1 = []
+for(let i = 0; i < namesArr.length; i++){
+    let names = namesArr[i].split(' ')
+    firstNamesArray1.push(names[1])
+}
+console.log(firstNamesArray1)
 
 console.log()
 // 7.   Loop over the celebrity list and then loop through each name. 

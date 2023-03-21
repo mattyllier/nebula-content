@@ -21,6 +21,12 @@ const containsLetter = (str,letter) => {
     return false
 }
 console.log(containsLetter('Paddy','y'))
+
+//or
+const containsALetter = (str,letter) => {
+    return str.includes(letter)
+}
+console.log(containsALetter('Paddy','y'))
   
 // 3. Write a function that takes in an array of full names (formatted "firstName lastName"), and returns a new array containing only first names.
 // Example array = ["Tom Smith", "Bob Jones", "Bill Williams"] returns ["Tom", "Bob", "Bill"]
@@ -50,6 +56,14 @@ const ageCalc = (year) => {
 }
 console.log(ageCalc(2000))
 
+//or
+const ageCalculator = (yearBorn) => {
+    const date = new Date()
+    let year = date.getFullYear()
+    let age = year - yearBorn
+    return `you turn ${age} this year`
+}
+console.log(ageCalculator(2000))
 
 //kata links (original assignment before pull)
 

@@ -9,6 +9,7 @@ const myCar = {
     recentOilChange: true,
     statesDrivenIn: ['IL','WI','MO','OK','TX','NM','AZ','AR','IN','KY','TN','GA','FL','SC','NC','VA','MD','WV','OH']
 }
+console.log(myCar.statesDrivenIn.sort())
 
 // 2.   Using dot-notation Log to the console 3 properties from the previous object
 console.log(myCar.type,myCar.colour,myCar.mileage)

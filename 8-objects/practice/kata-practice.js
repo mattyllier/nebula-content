@@ -21,7 +21,7 @@ function findSmallestInt(arr) {
       return Math.min(...arr)
 }
   
-//compare loop
+//or compare loop
 function findSmallestInteger(arr) {
       let least = Infinity
       for(let i = 0; i < arr.length; i++){
@@ -32,7 +32,25 @@ function findSmallestInteger(arr) {
       return least
 }
 
-//compare sort
+//or compare sort
 function smallestIntegerFinder(arr) {
       return arr.sort((a,b) => a-b)[0]
 }
+
+
+//add arrays
+function arrayPlusArray(arr1, arr2) {
+    return arr1.concat(arr2).reduce((acc, cur) => (acc + cur));
+  }
+
+//or loop
+function arrayPlusArray(arr1, arr2) {
+    arr3 = arr1.concat(arr2)
+    let sum = 0
+    for(let i = 0; i < arr3.length; i++){
+      sum += arr3[i]
+    }
+    return sum
+  }
+
+  

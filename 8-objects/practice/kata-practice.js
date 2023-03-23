@@ -53,4 +53,34 @@ function arrayPlusArray(arr1, arr2) {
     return sum
   }
 
-  
+
+  //count vowels in string
+  function getCount(str) {
+    //variable counter
+    let count = 0
+    //array of vowels to see if they match string
+    const vowels = ['a','e','i','o','u']
+    //loop through string
+    for(let i = 0; i < str.length; i++){
+      vowels.includes(str[i]) ? count++ : count
+    }
+    //each iteration check if current letter is in vowel list
+    return count;
+    //returns number as count of vowels
+  }
+
+  //as object
+  function getCount1(str) {
+    const vowels = {
+      a: true,
+      e: true,
+      i: true,
+      o: true,
+      u: true 
+    }
+    let count = 0
+    for(let i = 0; i < str.length; i++){
+      vowels[str[i]] ? count++ : count
+    }
+    return count;
+  }

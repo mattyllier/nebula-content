@@ -1,0 +1,100 @@
+:root {
+    --boxShadow: 0 1px 1px rgba(0,0,0,0.15), 0 2px 2px rgba(0,0,0,0.15), 0 4px 4px rgba(0,0,0,0.15), 0 8px 8px rgba(0,0,0,0.15);
+    --yellowColor: rgba(204,240,6);
+}
+
+body {
+    background-color: cornflowerblue;
+    background-image: url(about-me-page-background.jpg);
+    color: darkblue;
+    font-family: Tahoma;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 500px;
+}
+.header {
+    background-color: midnightblue;
+    color: azure;
+    width: 250px;
+    height: 40px;
+    padding: 10px;
+    border: 7px solid darkslategray;
+    box-shadow: var(--boxShadow);
+    border-radius: 15px;
+    text-align: center;
+}
+.myImage {
+    border-radius: 9px;
+    box-shadow: var(--boxShadow)
+}
+
+.ul1 {
+    background-color: midnightblue;
+    color: lavender;
+    box-shadow: var(--boxShadow);
+    padding: 10px;
+    border: 10px;
+    border-radius: 9px;
+    margin-top: 10px;
+}
+.ul2 {
+    background-color: midnightblue;
+    color: lightgray;
+    box-shadow: var(--boxShadow);
+    padding: 10px;
+    border: 10px;
+    border-radius: 9px;
+    margin-top: 10px;
+}
+
+h3 {
+    background-color: midnightblue;
+    color: lightgray;
+    box-shadow: var(--boxShadow);
+    padding: 10px;
+    border: 10px;
+    border-radius: 9px;
+    margin-bottom: 0px;
+}
+p {
+    color: var(--yellowColor);
+}
+.bio {
+    color: var(--yellowColor);
+}
+.p-bio {
+    background-color: midnightblue;
+    box-shadow: var(--boxShadow);
+    padding: 10px;
+    border: 10px;
+    border-radius: 9px;
+    margin-bottom: 0px;
+}
+.link {
+    background-color: darkblue;
+    color: cornflowerblue;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    font-family: Impact, Haettenschweiler, sans-serif
+}
+section {
+    text-align: center;
+}
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.h2 {
+    color: azure;
+    background-color: darkslategrey;
+    position: sticky;
+    top: 0;
+    padding: 7px;
+    border-radius: 10px;
+    box-shadow: var(--boxShadow);
+}

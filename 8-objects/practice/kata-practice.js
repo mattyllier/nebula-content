@@ -84,3 +84,14 @@ function arrayPlusArray(arr1, arr2) {
     }
     return count;
   }
+
+
+  //monkey count
+  function monkeyCount(n) {
+    const arr = []
+    for(let i = 1; i <= n; i++){
+      arr.push(i)
+    }
+    return arr
+  }
+  console.log(monkeyCount(8))

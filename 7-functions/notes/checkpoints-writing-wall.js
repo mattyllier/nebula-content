@@ -67,3 +67,6 @@ cubedNumbers.avgVal = (cubedNumbers) => {
     return (count/cubedNumbers.length)
 }
   console.log(cubedNumbers)
+
+const numArr = [1,1,27,64,125,216,343]
+console.log(numArr.reduce((x,y)=>x+y))

@@ -43,3 +43,27 @@ do{
     }
     i++
 } while(i < 100)
+
+const cubedNumbers = {
+    cube3: 27,
+    cube4: 64,
+    cube5: 125,
+    cube6: 216,
+    cube7: 343
+}
+console.log(cubedNumbers.cube3, cubedNumbers.cube5, cubedNumbers.cube7)
+
+const addProp = (func, keyStr, value) => {
+    func[keyStr] = value
+    return func
+  }
+console.log(addProp(cubedNumbers,'cube8',512))
+
+cubedNumbers.avgVal = (cubedNumbers) => {
+    let count = 0
+    for(let i = 0; i < cubedNumbers.length; i++){
+      count += cubedNumbers[i]
+    }
+    return (count/cubedNumbers.length)
+}
+  console.log(cubedNumbers)

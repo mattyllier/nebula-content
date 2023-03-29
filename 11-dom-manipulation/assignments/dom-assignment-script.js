@@ -25,9 +25,10 @@ console.log(document.getElementsByClassName('item'))
 
 //not saving in ul
 // const list = document.querySelectorAll('ul')
-// const newItem = list.createElement('li')  <- won't allow createElement unless behind document
+// const newItem = list.createElement('li') // <- won't allow createElement unless behind document
 // newItem.innerText = 'Item 4'
 // console.log(newItem.innerText)
 // console.log(document.querySelector('ul').innerText)
-const newItem = document.createElement('li').innerText = 'Item 4'
-console.log(newItem)
+const newEl = document.createElement('li').innerText = 'Item 4'
+console.log(newEl)
+

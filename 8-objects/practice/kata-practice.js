@@ -95,3 +95,27 @@ function arrayPlusArray(arr1, arr2) {
     return arr
   }
   console.log(monkeyCount(8))
+
+  //Sorts an array alphabetically by first letter in the sequence 
+  function sortArr(arr) {
+    return arr.sort()
+  }
+  const myArr = ['5JL-598', 'BFW-752', 'HX1-309', 'QZN-146', 'UMB-249']
+  console.log(sortArr(myArr))
+  //Input: array of strings 
+  //Output: sorted array of strings i.e. ‘5JL-598’ ‘BFW-752’ ‘HX1-309’ ‘QZN-146’ ‘UMB-249’ Count the number of ‘J’s in a string Input str Output count of letter ‘J’ i.e ’Jacob Jinglehiemersmithj’ = 2 Summing up the value of an array (just numbers) Input array Output number all elements summed together Ie [4,2,4,0] = 10 Given an array of grades of students find the number of passing students (65%) Input array student grades Output count of students who are above the passing gradepoint Ie [70, 55, 2, 100, 95, 85] = 4 Is an element in a string or array (remake the includes function) Input haystack (array | string), needle (any) Output boolean is the needle inside the haystack Ie [‘1’,’2’,3,’4’], 4 = false [‘1’,’2’,3,’4’], 3 = true
+
+function removeChar(str){
+  const arr = str.split('')
+  arr.shift()
+  arr.pop()
+  return arr.join('')
+  };
+  console.log(removeChar('simni hazarah'))
+
+  const s = 'ambigram aik la`alef at hamoach'
+  const findShortest = (s) => {
+    return s.split(' ').reduce((shortest, word)=> Math.min(shortest,word.length), Infinity)
+    }
+  console.log(findShortest(s))
+  

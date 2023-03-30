@@ -8,9 +8,9 @@ console.log(document.querySelector('h1').innerText)
 console.log(document.querySelector('p').innerText)
 
 // Select the <ul> element using getElementById() and log it to the console
-console.log(document.getElementById('container')[2]) //not working
+console.log(document.getElementById('container').children[2]) //not working
 //or
-console.log(document.getElementById('list').innerText)
+const listEl = document.getElementById('list')
 
 // Select the first <li> element using querySelector() and log it to the console
 console.log(document.querySelector('li').innerText)
@@ -29,6 +29,8 @@ console.log(document.getElementsByClassName('item'))
 // newItem.innerText = 'Item 4'
 // console.log(newItem.innerText)
 // console.log(document.querySelector('ul').innerText)
-const newEl = document.createElement('li').innerText = 'Item 4'
+const newEl = document.createElement('li')
+newEl.innerText = 'Item 4'
+listEl.appendChild(newEl)
 console.log(newEl)
 

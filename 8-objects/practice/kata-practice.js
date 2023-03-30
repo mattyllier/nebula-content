@@ -118,4 +118,58 @@ function removeChar(str){
     return s.split(' ').reduce((shortest, word)=> Math.min(shortest,word.length), Infinity)
     }
   console.log(findShortest(s))
+
+
+  //sort by first letter in sequence instead of numbers
+  //all letters are capital
+  const testone = ['5JL-598', 'BFW-752'] //BFW-752, 5JL-598
+  const testtwo = ['HX1-309', 'QZN-146'] //HX1-309, QZN-146
+  const testthree = ['VTP-415', '99O-827'] //99O-827, VTP-415
+  const testfour = ['RGA-932', '643-H81'] //643-H81, RGA-932
+  const testfive = ['NYX-675', 'UMB-249'] //NYX-675, UMB-249
+
+  // const sortByLetters = (arr) => {
+  //   const number = (/[0-9]/)
+  //   const letter = (/[A-Z]/)
+  //   for(let i = 0; i < arr.length; i++){
+  //     arr[i].split('')
+  //   }
+  //   arr.sort((/\d/,/\D/)=>/\D/ > /\d/)
+  // }
   
+console.log(sortByLetters(testone))
+
+  //Dayana problem
+  // Summing up the value of an array (just numbers) Input array Output number all elements summed together
+
+//reduce method compares a,b parameters, converting to added sum each iteration
+const sumArray = (arr) => {
+  return arr.reduce((a,b)=>a+b)
+}
+
+//set counter variable, use for loop to iterate through array, add to sum each iteration
+const sumArray1 = (arr) => {
+  let sum = 0
+  for(let i = 0; i < arr.length; i++){
+    sum += arr[i]
+  }
+  return sum
+}
+
+const test1 = [10,77] //= 87
+const test2 = [28,52] //= 80
+const test3 = [20,20,60] //= 100
+const test4 = [7,11,3] //= 21
+const test5 =  [4,2,4,0] //= 10
+
+console.log(sumArray(test1))
+console.log(sumArray1(test1))
+console.log(sumArray(test2))
+console.log(sumArray1(test2))
+console.log(sumArray(test3))
+console.log(sumArray1(test3))
+console.log(sumArray(test4))
+console.log(sumArray1(test4))
+console.log(sumArray(test5))
+console.log(sumArray1(test5))
+

@@ -5,14 +5,14 @@ const string2  = "goodbye"
 const string3 = `${string1} ${string2}`;
 console.log(string3);
 //or
-// console.log(string1.concat(' ',string2))
+console.log(string1.concat(' ',string2))
 //or
-// const string4 = (string1+' '+string2);
-// console.log(string4);
+const string4 = (string1+' '+string2);
+console.log(string4);
 //or
-// let string5 = "hello"
-// string5 = string5.concat(" ",string2);
-// console.log(string5);
+let string5 = "hello"
+string5 = string5.concat(" ",string2);
+console.log(string5);
 
 // 2. Save the substring "Friend" from the string "Hello Friend"
 const greeting = "Hello Friend"

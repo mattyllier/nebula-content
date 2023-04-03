@@ -19,10 +19,10 @@ body {
     /*grid-template-rows: 200px 200px 200px;*/
     grid-template-rows: auto;
     grid-template-columns: repeat(4, 250px);
-    grid-template-areas:
+    /* grid-template-areas:
     'nav header header'
     'nav main main '
-    'footer footer footer';
+    'footer footer footer'; */
     
     /*grid-template-columns: 200px 200px 200px;*/
     place-items: center;

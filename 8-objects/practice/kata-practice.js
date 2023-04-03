@@ -137,7 +137,7 @@ function removeChar(str){
   //   arr.sort((/\d/,/\D/)=>/\D/ > /\d/)
   // }
   
-console.log(sortByLetters(testone))
+// console.log(sortByLetters(testone))
 
   //Dayana problem
   // Summing up the value of an array (just numbers) Input array Output number all elements summed together
@@ -173,3 +173,34 @@ console.log(sumArray1(test4))
 console.log(sumArray(test5))
 console.log(sumArray1(test5))
 
+function getIssuer(number) {
+  let str = number.toString()
+  switch(true) {
+      case (str.slice(0,2)==='34'||str.slice(0,2)==='37')&& str.length===15:
+        return 'AMEX';
+      case str.slice(0,4)==='6011' && str.length===16:
+        return 'Discover';
+      case str[0]==='5'&& (str[1]>='1'&& str[1]<='5') && str.length===16:
+        return 'Mastercard';
+      case str[0]==='4'&& (str.length===13 || str.length===16):
+        return 'VISA';
+      default:
+        return 'Unknown'
+  }
+}
+
+function getIssuer(number) {
+  let str = number.toString()
+  switch(true){
+    case str.match(/34\d{13}/)||str.match(/37\d{13}/):
+      return 'AMEX'
+    case str.match(/6011\d{12}/):
+      return 'Discover'
+    case str.match(/[51-55]\d{14}/):
+      return 'Mastercard'
+    case str.match(/4\d{12}/)||str.match(/4\d{15}/):
+      return 'VISA'
+      default:
+      return 'Unknown'
+  }
+}

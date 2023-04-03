@@ -1,0 +1,54 @@
+body {
+    background-color: lavender;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    font-size: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Tahoma, sans-serif;
+    text-decoration: dashed;
+    color: mediumspringgreen;
+    background-image: url(michael-dziedzic-qDG7XKJLKbs-unsplash.jpg);
+    
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#yourName {
+    border-radius: 50px;
+    color: midnightBlue;
+    font-size: 90%;
+    background-color: mintcream;
+    font-family:tahoma;
+    align-items: center;
+    cursor: text;
+    height: 20%;
+}
+#name {
+    border-radius: 50px;
+    color: midnightBlue;
+    font-size: 90%;
+    background-color: mintcream;
+    font-family:tahoma;
+    align-items: center;
+    cursor: text;
+    height: 20%;
+}
+
+textArea {
+    height: 100px;
+    width: 350px;
+    border-radius: 30px;
+    font-family: verdana;
+    color: darkcyan;
+    background-color: darkslategray;
+    font-size: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

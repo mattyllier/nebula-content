@@ -37,11 +37,17 @@ Write a higher order function that calculates some features of a string
     stringInfo(nonLetters, 'Howdy Partner!') => 2                    */
 
 const stringInfo=(func,str)=>{
-    return func(str)
+    let count = 0
+    for(let char of str){
+        if(func(char)){
+            count++
+        }
+    }
+    return count
 }
 
 const length =(str)=>{
-    return str.length
+    return true
 }
 
 // const vowelsFilter = (arr)=>{
@@ -53,24 +59,14 @@ const length =(str)=>{
 //     return arr
 // }
 
-const vowels =(str)=>{
-  let count = 0
-  for(let char of str){
-    if(char===/[AeEeIiOoUu]/g){
-        count++
-    }
-  }
-  return count
+const vowels =(char)=>{
+    let vowels = 'AaEeIiOoUu'
+    return vowels.includes(char)
 }
 
-const nonLetters =(str)=>{
-    let count = 0
-    for(let char of str){
-        if(char === /[^a-zA-Z]/g){
-            count++
-        }
-    }
-    return count
+const nonLetters =(char)=>{
+    let nonLetters = /[^a-z]/g
+    return char===nonLetters
 }
 
 const myStr = 'use this in higher order functions'

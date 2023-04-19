@@ -10,15 +10,23 @@ const alterArr = (func,arr)=>{
 }
 
 const doubler = (arr)=>{
-    for(let val in arr){
-        val*=2
-    }
-    return arr
+    return arr.map(a=>a*2)
 }
+
+const halves = (arr)=>{
+    return arr.map(a=>a/2)
+}
+
+const exp = (arr)=>{
+    return arr.map(a=>a**2)
+}
+
 
 myArr = [1,3,45,5,7,96,908,907]
 
 console.log(alterArr(doubler,myArr))
+console.log(alterArr(halves,myArr))
+console.log(alterArr(exp,myArr))
 
 /* Question 2
 Write a higher order function that calculates some features of a string
@@ -28,8 +36,67 @@ Write a higher order function that calculates some features of a string
     stringInfo(capitals, 'Howdy Partner!') => 2
     stringInfo(nonLetters, 'Howdy Partner!') => 2                    */
 
+const stringInfo=(func,str)=>{
+    return func(str)
+}
+
+const length =(str)=>{
+    return str.length
+}
+
+// const vowelsFilter = (arr)=>{
+//     for(let char of arr){
+//         if(char!==/[AaEeIiOoUu]/g){
+//             arr.splice([char],1)
+//         }
+//     }
+//     return arr
+// }
+
+const vowels =(str)=>{
+  let count = 0
+  for(let char of str){
+    if(char===/[AeEeIiOoUu]/g){
+        count++
+    }
+  }
+  return count
+}
+
+const nonLetters =(str)=>{
+    let count = 0
+    for(let char of str){
+        if(char === /[^a-zA-Z]/g){
+            count++
+        }
+    }
+    return count
+}
+
+const myStr = 'use this in higher order functions'
+
+console.log(stringInfo(length,myStr))
+console.log(stringInfo(vowels,myStr))
+console.log(stringInfo(nonLetters,myStr))
+
+
+
 /* Question 3
 Write a higher order function that minimizes a given list of numbers into one number
     Example:
     minimizeNums(add, [2,3,5,8]) => 18                            */
     
+const minimize = (func, arr)=>{
+    return func(arr)
+}
+
+const mult = (arr)=>{
+    return arr.reduce((a,b)=>a*b)
+}
+
+const add = (arr)=>{
+    return arr.reduce((a,b)=>a+b)
+}
+
+console.log(minimize(add,myArr))
+console.log(minimize(mult,myArr))

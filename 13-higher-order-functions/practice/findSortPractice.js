@@ -42,18 +42,17 @@ console.log(partyPeople.sort((a,b)=>a.age - b.age))
 Write an HOF to sort an array of strings by the last letter of the string */
 const strings = ['sam', 'john', 'daniel', 'vanessa']
 
-// console.log(strings.sort((a,b)=>{
-//   console.log(a.split('').reverse().join(''))
-//   console.log(b.split('').reverse().join(''))
-// }))
+// const sort = (arr)=>{
+//     const revrr = []
+//     for(let name of arr){
+//         let newName = name.split('').reverse().join('')
+//         revrr.push(newName)
+//     }
+//     return revrr
+// }
 
-const sort = (arr)=>{
-    const revrr = []
-    for(let name of arr){
-        let newName = name.split('').reverse().join('')
-        revrr.push(newName)
-    }
-    return revrr
-}
+// console.log((sort(strings)).sort())
 
-console.log((sort(strings)).sort())
+console.log(strings.sort((a,b)=>{
+    return a[a.length-1]>b[b.length-1] ? 1:-1
+}))

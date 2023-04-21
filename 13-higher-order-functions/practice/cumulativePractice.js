@@ -41,8 +41,9 @@ const phoneNums = [
     ];
 
 console.log(phoneNums.map(a=>{
-    const spliced = a.split('').splice(1,6,'##-###').join('')
-    return a.replace(spliced,'##-###')
+    const spliced = a.split('')
+    spliced.splice(1,8,'##-###-#')
+    return spliced.join('')
 }))
 
 /* Question 5
@@ -99,4 +100,4 @@ const food = [
     { name: "Bread", exp: new Date(2023, 11, 20) },
 ];
 
-console.log(food.sort((a,b)=>a.exp-b.exp))
+console.log(food.sort((a,b)=>a.exp-b.exp)[0])

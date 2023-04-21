@@ -132,3 +132,8 @@ function multipleSteps(num) {
 
 
   //     O(log n)  loops at logarithmic indices
+
+
+  const strings = ['returns','these','strings','reversed']
+const reversed = strings.map(a=>a.split('').reverse().join(''))
+console.log(reversed)

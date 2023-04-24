@@ -37,3 +37,7 @@ console.log(myStr.replace(/[a-zA-Z]/g,''))
 
 const myArr = myStr.split('')
 console.log(myArr.filter(a=>/[^a-zA-Z]/g.test(a)).join(''))
+
+const myArr1 = myStr.split('')
+console.log(myArr.filter(a=>/[^a-z]/gi.test(a)).join(''))
+

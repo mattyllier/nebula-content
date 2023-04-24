@@ -23,3 +23,21 @@ const binarySearch = (arr,key)=>{
 console.log(binarySearch(myArr,98))
 
 console.timeEnd('binary search')
+
+
+
+const toBinary = (num) =>{
+    console.log(num.toString(2)==(+(num.toString(2)))? true : false)
+    console.log(+(num.toString(2)),typeof +(num.toString(2)))
+    return `${num.toString(2)} ${typeof num.toString(2)}`
+}
+console.log(toBinary(576))
+
+const myArr0 = ['234','213425','2342','23525','235253']
+console.log(myArr0.filter(a=>(/\d{4}\d{6}/g).test(a)))
+
+
+console.time('test')
+console.log(myArr.indexOf(98))
+console.timeEnd('test')
+

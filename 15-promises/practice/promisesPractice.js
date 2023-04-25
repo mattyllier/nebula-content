@@ -64,3 +64,23 @@ promise.then(v => {
 
 
   //v, v*2, v*2, v
+
+
+
+  let sleep = (time)=>{
+    return new Promise(res=>{
+        setTimeout(res,time)
+    })
+  }
+
+  async function spawn(){
+    for(let i = 0; i < 10; i++){
+    await sleep(i*1000)
+    sleep(1000)
+    return console.log(i)
+    }
+}
+spawn()
+    // let img = document.createElement('img')
+    // img.src = ''
+    // document.body.appendChild(img)

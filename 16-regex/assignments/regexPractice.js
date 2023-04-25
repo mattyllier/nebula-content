@@ -32,7 +32,7 @@ console.log(instancesOf(myStr,/t/gi))
 
 // 4.   Write a function that checks if all characters in a string are lowercase letters
 
-myStr2 = 'weigfnefinqwfQ'
+myStr2 = 'weigfnefinqwf'
 
 const checkLowerCase = (str)=>{
     const newArr = []
@@ -43,6 +43,12 @@ const checkLowerCase = (str)=>{
     return str===newArr.join('')
 }
 console.log(checkLowerCase(myStr2))
+
+//or
+const lowerCaseLetters = (str)=>{
+    return str.split('').every(a=>/[a-z]/g.test(a))
+}
+console.log(lowerCaseLetters(myStr2))
 
 // 5.   Write a function that checks if a string has an uppercase letter
 

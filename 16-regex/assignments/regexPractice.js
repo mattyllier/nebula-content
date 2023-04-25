@@ -15,7 +15,7 @@ console.log(test123(myStr))
 //      ex: 'ca'  => false
 
 const testCAfterA = (str)=>{
-    return /YOM(Q*)/i.test(str)
+    return /YOM.*Q/i.test(str)
 }
 console.log(testCAfterA(myStr))
 
@@ -29,6 +29,14 @@ const instancesOf = (str,regex)=>{
     return str.match(regex).length
 }
 console.log(instancesOf(myStr,/t/gi))
+
+//or
+const instancesOfChar = (str,substr)=>{
+    const regex = new RegExp(substr, 'gi')
+    return str.match(regex).length
+}
+
+console.log(instancesOfChar(myStr,'t'))
 
 // 4.   Write a function that checks if all characters in a string are lowercase letters
 
@@ -44,11 +52,21 @@ const checkLowerCase = (str)=>{
 }
 console.log(checkLowerCase(myStr2))
 
+
 //or
 const lowerCaseLetters = (str)=>{
     return str.split('').every(a=>/[a-z]/g.test(a))
 }
 console.log(lowerCaseLetters(myStr2))
+
+//or
+
+const myStr5 = 'newsyntax'
+const lowerCaseStr = (str)=>{
+    return /^[a-z]+$/.test(str)
+}
+console.log(lowerCaseStr(myStr5))
+
 
 // 5.   Write a function that checks if a string has an uppercase letter
 
@@ -69,16 +87,23 @@ console.log(checkDash(myStr3))
 // 7.   Write a function that utilizes regex to check if a string contains '.com' at the end
 
 const containsCom = (str)=>{
-    return /\.com/.test(str)
+    return /\.com$/.test(str)
 }
 console.log(containsCom(myStr3))
 
 // 8.   Write a function that utilizes regex to check if a string contains 'http://' or 'https://' at the beginning
 
 const containsHttp = (str)=>{
-    return /http\:\/\/|https\:\/\//.test(str)
+    return /^http:\/\/|https:\/\//.test(str)
 }
 console.log(containsHttp(myStr3))
+
+//or
+const containsHttps = (str)=>{
+    return /^https?:\/\//.test(str)
+}
+console.log(containsHttps(myStr3))
+
 
 // 9.   Write a function that utilizes regex to indicate if a string's first letter is uppercase or not
 

@@ -1,6 +1,6 @@
 //Chinese encryptor
 
-const myStr = 'SLICKERVICOR'
+const myStr = 'IAMTTYLLER'
 
 const sBox = (str)=>{
     const arr = str.toLowerCase().split('').map(a=>a.charCodeAt(0).toString(2))

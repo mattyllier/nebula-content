@@ -41,3 +41,95 @@ console.time('test')
 console.log(myArr.indexOf(98))
 console.timeEnd('test')
 
+
+
+
+
+//Chinese encryptor (whiteboard)
+const myStr = 'iamttyller'
+const myStr2 = 'IAMTTYLLER'
+const sBox = (str)=>{
+    const arr = str.toLowerCase().split('').map(a=>a.charCodeAt(0).toString(2))
+    const newArr = arr.map(a=> a[1]==='1' ? a.replace(a[1],'0') : a[1])
+    return newArr.map(a=>String.fromCharCode(parseInt(a,8))).join('')
+}
+const output = sBox(myStr2)
+console.log(output)
+console.log(sBox('j'))
+
+
+//Chinese decryptor
+const sBoxR = (str)=>{
+    const obj = {
+        老 : 'a',
+        耈 : 'b',
+        耉 : 'c',
+        聀 : 'd',
+        聁 : 'e',
+        聈 : 'f',
+        聉 : 'g',
+        舀 : 'h',
+        舁 : 'i',
+        興 : 'j',
+        艀 : 'l',
+        选 : 's',
+    }
+    const newArr = []
+    str.split('').forEach(a=>{
+        newArr.push(obj[a])
+    })
+    return newArr
+}
+console.log(sBoxR(output))
+
+// console.log(output.charCodeAt(4)-myStr.charCodeAt(4))
+// console.log(output.charCodeAt(0).toString(2))
+// console.log(myStr.charCodeAt(0).toString(2))
+
+const sBoxr = (str) => {
+    const arr = str.split('').map(a=>a.charCodeAt(0).toString(2))
+   // console.log(arr)
+    const newArr = arr.map(a=>{
+        return a[1]==='1' ? a.replace(a[1],'0') : a.replace(a[1],'1')
+    })
+   // console.log(newArr)
+    return newArr.map(a=>String.fromCharCode(parseInt(a,2))).join('')
+}
+//console.log(sBoxr(output))
+
+//'c' = 'beetle'
+//'e'= 'pan'
+//'i' ='lift'
+//'k' = 'raise'
+//'l' = 'scorpion'
+//'o' = 'stern'
+//'r' = 'jiong'
+//'s' = 'select'
+//'v' = 'shi'
+
+//a 0001 A=>Q
+//b 0010 B=>R
+//c 0011 C=>S
+//d 0100 D=>T
+//e 0101 E=>U
+//f 0110 F=>V
+//g 0111 G=>W
+//h 1000 H=>X
+//i 1001 I=>Y
+//j 1010 J=>Z
+//k 1011
+//l 1100
+//m 1101
+//n 1110
+//o 1111
+//p 0000
+//q 0001
+//r 0010
+//s 0011
+//t 0100
+//u 0101
+//v 0110
+//w 0111
+//x 1000
+//y 1001
+//z 1010

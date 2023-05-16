@@ -1,5 +1,7 @@
-export default function About({about}){
+export default function About({x,y}){
         return (
-            <p>DisplayAbout: {about}</p>
+            <div className ='about'>
+            <h1>X is {x} and y is {y}.</h1>
+          </div>
             )
 }

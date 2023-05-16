@@ -3,10 +3,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url(logo.svg);
+  background-color: darkslategrey;
 }
 
 .display {
-  color: aqua;
+  background-color: darkslategrey;
+  color: lightgrey;
+  border: solid 10px black;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .form {
@@ -14,4 +20,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: darkslategrey;
+  color: lightgrey;
+  border: solid 10px black;
+  border-radius: 10px;
+  padding: 10px;
 }

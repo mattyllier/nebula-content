@@ -1,0 +1,17 @@
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #766666;
+    color: lightgrey;
+    border: solid 5px black;
+    border-radius: 10px;
+    font-family: tahoma;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px;
+    width: 300px;
+    height: 200px;
+}

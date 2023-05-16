@@ -1,0 +1,42 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 10px black;
+    border-radius: 30px;
+}
+
+.field {
+    padding: 10px;
+}
+
+.button {
+    background-color: #766666;
+    color: lightgrey;
+    border: solid 5px black;
+    border-radius: 10px;
+    font-family: tahoma;
+    font-weight: bold;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #5c5353;
+}
+
+.input {
+    background-color: lightgrey;
+    color: black;
+    border-radius: 10px;
+    font-family: tahoma;
+    padding: 3px;
+    outline: none;
+}
+
+.user {
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center;
+}

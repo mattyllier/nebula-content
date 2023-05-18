@@ -13,7 +13,8 @@ export default function TodoForm(props){
         e.preventDefault()
         props.onSubmit({
             id: Math.floor(Math.random()*1000000),
-            text: input
+            text: input,
+            timestamp: new Date
         })
         setInput('')
     }

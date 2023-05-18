@@ -44,6 +44,26 @@ h1 {
   margin: 5px;
 }
 
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: -40px;
+}
+
+.buttonLabels {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 10px 0 10px;
+}
+
+.date{
+  margin-top: -30px;
+  font-size: 20px;
+}
+
 .todoInput {
   padding: 14px 32px 14px 16px;
   border-radius: 4px 0 0 4px;

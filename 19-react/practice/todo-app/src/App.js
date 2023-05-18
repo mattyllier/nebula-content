@@ -7,7 +7,6 @@ function App() {
     <div className="App">
       <Routes>
       <Route path='/' element={<TodoList/>}/>
-      <Route path='contact' element={<Contact/>}/>
       </Routes>
     </div>
   );

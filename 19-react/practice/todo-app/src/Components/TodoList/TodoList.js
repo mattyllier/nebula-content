@@ -1,7 +1,8 @@
 import {useState} from 'react'
 import TodoForm from '../TodoForm/TodoForm'
 import Todos from '../Todos/Todos'
-import {Link} from 'react-router-dom'
+import {BsFillFileArrowUpFill} from 'react-icons/bs'
+import {BsFillFileArrowDownFill} from 'react-icons/bs'
 
 export default function TodoList(){
     const [todos,setTodos] = useState([])
@@ -24,9 +25,14 @@ export default function TodoList(){
         })
         setTodos(updatedTodos)
     }
+    const sortTodos=(sort)=>{
+        sort==='asc' ? setTodos(todos.forEach(todo=>todo.text).sort((a,b)=>a - b)) : todos.sort((a,b)=>b.text-a.text)
+    }
     return (
         <div>
-            <h1>What needs to be done today?</h1>
+            <h1 className='header'>What needs to be done today?</h1>
+            <BsFillFileArrowUpFill className='todoButton sortButton' onClick={()=>sortTodos('asc')}>Ascending</BsFillFileArrowUpFill>
+            <BsFillFileArrowDownFill className='todoButton sortButton' onClick={()=>sortTodos('desc')}>Descending</BsFillFileArrowDownFill>
             <TodoForm onSubmit={addTodo}/>
             <Todos todos={todos} completeTodo={completeTodo} removeTodo={removeTodo} updateTodo={updateTodo}/>
         </div>

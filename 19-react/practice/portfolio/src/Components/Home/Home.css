@@ -1,0 +1,38 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 80px 10px 80px;
+    color: white;
+    background: linear-gradient(
+        90deg,
+        rgb(194,89,255)0%,
+        rgb(188,202,49)100%
+    );
+}
+
+.button {
+    cursor: pointer;
+    background: transparent;
+    font-size: 50px;
+}
+
+.button:hover{
+    background-color: white;
+}
+
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(
+        90deg,
+        rgb(151, 40, 231)0%
+        rgb(239,34,210)100%
+    ); */
+}
+
+.homeTitle {
+    font-size: 48px;
+    margin-top: 60px;
+}

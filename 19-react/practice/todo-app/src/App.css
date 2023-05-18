@@ -35,6 +35,15 @@ h1 {
   opacity: 0.4;
 }
 
+.header{
+  color: white;
+}
+
+.sortButton {
+  font-size: 36px;
+  margin: 5px;
+}
+
 .todoInput {
   padding: 14px 32px 14px 16px;
   border-radius: 4px 0 0 4px;

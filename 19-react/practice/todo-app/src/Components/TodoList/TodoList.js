@@ -25,14 +25,20 @@ export default function TodoList(){
         })
         setTodos(updatedTodos)
     }
-    const sortTodos=(sort)=>{
-        sort==='asc' ? setTodos(todos.forEach(todo=>todo.text).sort((a,b)=>a - b)) : todos.sort((a,b)=>b.text-a.text)
+    const sortAsc=(todos)=>{
+        const sorted = [...todos].sort((a,b)=>a.text.localeCompare(b.text))
+        setTodos(sorted)
     }
+    const sortDesc=(todos)=>{
+        const sorted = [...todos].sort((a,b)=>b.text.localeCompare(a.text))
+        setTodos(sorted)
+    }
+
     return (
         <div>
             <h1 className='header'>What needs to be done today?</h1>
-            <BsFillFileArrowUpFill className='todoButton sortButton' onClick={()=>sortTodos('asc')}>Ascending</BsFillFileArrowUpFill>
-            <BsFillFileArrowDownFill className='todoButton sortButton' onClick={()=>sortTodos('desc')}>Descending</BsFillFileArrowDownFill>
+            <BsFillFileArrowUpFill className='todoButton sortButton' onClick={()=>sortAsc(todos)}>Ascending</BsFillFileArrowUpFill>
+            <BsFillFileArrowDownFill className='todoButton sortButton' onClick={()=>sortDesc(todos)}>Descending</BsFillFileArrowDownFill>
             <TodoForm onSubmit={addTodo}/>
             <Todos todos={todos} completeTodo={completeTodo} removeTodo={removeTodo} updateTodo={updateTodo}/>
         </div>

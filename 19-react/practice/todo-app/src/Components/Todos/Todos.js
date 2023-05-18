@@ -17,10 +17,11 @@ export default function Todos({todos,completeTodo,removeTodo,updateTodo}){
         })
     }
     if(edit.id) return <TodoForm onSubmit={submitUpdate}/>
+    else {
     return (
         todos.map((todo,i)=>{
             return (
-            <div className={todo.isComplete ? 'todoRowComplete' : 'todoRow'} key={i}>
+            <div className={todo.isComplete ? 'todoRow complete' : 'todoRow'} key={i}>
                 <div key={todo.id} onClick={()=> completeTodo(todo.id)}>
                  {todo.text}   
                 </div>
@@ -32,4 +33,5 @@ export default function Todos({todos,completeTodo,removeTodo,updateTodo}){
             )
         })
     )
+    }
 }

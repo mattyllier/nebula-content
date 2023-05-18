@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import TodoForm from '../TodoForm/TodoForm'
 import Todos from '../Todos/Todos'
+import {Link} from 'react-router-dom'
 
 export default function TodoList(){
     const [todos,setTodos] = useState([])
@@ -10,7 +11,7 @@ export default function TodoList(){
         console.log(`New Todo: ${todo} \nOldTodos: ${todos}`)
     }
     const removeTodo = (id)=>{
-        const removeArr = [...todos].filter(todo=>todo.id!==id)
+        const removeArr = todos.filter(todo=>todo.id!==id)
         setTodos(removeArr)
     }
     const updateTodo = (todoId, newValue)=>{

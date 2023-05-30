@@ -69,3 +69,24 @@ function listNodeToString1(node){
 }
 
 console.log(listNodeToString1(head))
+
+
+//Sort Massachusetts license plate combinations
+const sortMassCombinations=(str)=>{
+    const arr = str.split('').filter(x=>x.match(/\d/g))
+    const month = arr[arr.length-1]
+    const obj = {
+        1 : 'January',
+        2 : 'February',
+        3: 'March',
+        4: 'April',
+        5: 'May',
+        6: 'June',
+        7: 'July',
+        8: 'August',
+        9: 'September',
+        0: 'October'
+    }
+    return obj[month]
+}
+console.log(sortMassCombinations('41EP00'))

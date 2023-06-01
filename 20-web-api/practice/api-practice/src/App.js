@@ -1,9 +1,28 @@
 
 import './App.css';
+import {useState,useEffect} from 'react'
 //import Person from './Components/Person/Person'
 import LanguageList from './Components/LanguageList/LanguageList'
+import Search from './Components/Search/Search'
 
 function App() {
+  const [results,setResults] = useState([])
+  const handleChange=(e)=>{
+   if(e.target.name!==''){
+    results.filter(x=>e.target.name.includes(x))
+   }
+  }
+  useEffect(()=>{
+    fetch('https://api.imgflip.com/get_memes')
+    .then(res=>res.json())
+    .then(res=>{
+      let arr = []
+      for(let key in res.message){
+        arr.push(key)
+      }
+      setResults(arr)
+    })
+  })
   // const json = `{
   //   "employees":[
   //       {
@@ -75,12 +94,18 @@ function App() {
         "img": "https://seeklogo.net/wp-content/uploads/2016/07/ruby-vector-logo.png",
         "version": "3.3.0",
         "isInUse": true
+      },
+      {
+        "name": "VB.NET",
+        "img": "https://1.bp.blogspot.com/-k8cyYC06VjI/Xm9Uaj76SZI/AAAAAAAALkc/MqiKk07ZN2cJ9z1rlIxgI0WgAI3FWE7wACLcBGAsYHQ/s1600/1920px-VB.NET_Logo.svg.png",
+        "version": "16.9",
+        "isInUse": true
       }
     ]
   }`
   //const data = JSON.parse(json)
   const myData = JSON.parse(myJson)
-  console.log(myData)
+ // console.log(myData)
   // const employeeList = data.employees.map(person=>{
   //     return <Person className='person' key={person.username} name={person.name} city={person.city}/>
   //   })
@@ -89,7 +114,7 @@ function App() {
     {/* <h1>Data</h1>
     {employeeList} */}
     <LanguageList data={myData}/>
-
+    <Search handleChange={handleChange}/>
     </>
   );
 }

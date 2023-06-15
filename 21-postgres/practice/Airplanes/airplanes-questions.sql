@@ -1,22 +1,10 @@
 -- 1. What are the names and locations of all airports in Portugal? (name, city)
 
 airplanes=# SELECT name,city FROM airport WHERE country='Portugal';
-     name      |   city
----------------+-----------
- Sa Carneiro   | Porto
- Portela       | Lisboa
- Faro          | Faro
- Madeira       | Funchal
- Ponta Delgada | S. Miguel
-(5 rows)
 
 -- 2. What are the names of all planes of the DC-10 version? (name)
 
 airplanes=# SELECT name FROM plane JOIN model ON plane.planecod=model.modelcod WHERE model.version='DC-10';
-    name
--------------
- Scott Adams
-(1 row)
 
 -- 3. How many engines does each plane have? (plane_name, number)
 

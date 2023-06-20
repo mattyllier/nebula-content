@@ -90,3 +90,22 @@ const sortMassCombinations=(str)=>{
     return obj[month]
 }
 console.log(sortMassCombinations('41EP00'))
+
+
+const findKth = (nums,k)=>{
+    let heap = []
+    for(let i = 0; i < nums.length; i++){
+        if(heap.length<k){
+            heap.push(nums[i])
+        }
+        if(heap[heap.length-1] < nums[i]){
+            for(let j = 0; j < heap.length; j++){
+                if(heap[j] > nums[i]){
+                    heap.splice(j,0,nums[i])
+                    break;
+                }
+            }
+            heap.length=heap.length-1
+        }
+    }
+}

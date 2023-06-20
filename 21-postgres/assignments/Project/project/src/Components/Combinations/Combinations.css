@@ -1,0 +1,26 @@
+.combination {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* @property --num {
+    syntax: '<integer>';
+    initial-value: 9AAA01;
+    inherits: false;
+} 
+
+.combination {
+    transition: --num 1s;
+    counter-reset: num var(--num);
+    font-size: 76px;
+}
+
+.combination:hover {
+    --num: 10000;
+}
+
+.combination::after {
+    content: counter(num);
+}  */

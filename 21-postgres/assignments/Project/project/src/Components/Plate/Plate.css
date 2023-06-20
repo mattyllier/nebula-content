@@ -1,0 +1,10 @@
+.plate {
+    height: 200px;
+    width: 400px;
+    border: solid 10px black;
+    border-radius: 20px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}

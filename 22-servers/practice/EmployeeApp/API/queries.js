@@ -19,11 +19,11 @@ const getEmployees = (req,res) =>{
 const addEmployee = (req,res)=>{
     try {
         const {
-            name, email_address, age
+            id,employee_name, employee_id,date_hired,city_id
         } = req.body
         pool.query(
-            `INSERT INTO employee (name, email_address, age) VALUES ($1,$2,$3) RETURNING *;`,
-            [name, email_address, age],
+            `INSERT INTO employee (id, employee_name, employee_id, date_hired, city_id) VALUES ($1,$2,$3,$4,$5) RETURNING *;`,
+            [id,employee_name, employee_id,date_hired,city_id],
             (error, results)=>{
                 if(error){
                     console.log(error, '<---error here')
@@ -60,15 +60,16 @@ const getEmployee = (req,res)=>{
 };
 
 const updateEmployee = (req,res)=>{
-    let {name, email_address, age, id} = req.body;
+    let {id,employee_name, employee_id,date_hired,city_id} = req.body;
     let myPromise = new Promise(function(resolve,reject){
         pool.query(`SELECT * FROM employee WHERE id=$1;`,[id], (error,results)=>{
             if(error){
                 throw error;
             } else if(res){
-                name = name !== undefined ? name : results.rows.name;
-                email_address = email_address !== undefined ? email_address : results.rows.email_address;
-                age = age !== undefined ? age : results.rows.age;
+                employee_name = employee_name !== undefined ? employee_name : results.rows.employee_name;
+                employee_id = employee_id !== undefined ? employee_id : results.rows.employee_id;
+                date_hired = date_hired !== undefined ? date_hired : results.rows.date_hired;
+                city_id = city_id !== undefined ? city_id : results.rows.city_id;
                 resolve(results.rows)
                 return results.rows
             } else {
@@ -80,9 +81,9 @@ const updateEmployee = (req,res)=>{
         try {
             pool.query (
                 `UPDATE employee
-                SET name=$1, email_address=$2, age=$3
-                WHERE id=$4;`,
-                [name, email_address, age, id],
+                SET employee_name=$1, employee_id=$2, date_hired=$3, city_id=$4
+                WHERE id=$5;`,
+                [employee_name, employee_id, date_hired, city_id, id],
                 (error, results)=>{
                     if(error){
                         console.log(error, '<--- error here')
